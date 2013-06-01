@@ -1,4 +1,7 @@
 <?php
+
+//you need to modify this file to match your mysql configuration
+
 $con = mysql_connect("localhost", "dbusername","dbpassword");
 
 if (!$con)
