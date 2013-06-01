@@ -7,7 +7,7 @@ include 'include/oauth_totp.php';
 
 // Initial Settings
 $MY_SECRET="ThisIsATestSample";
-$MY_SITE_NAME="wheresmymoney.tk";
+$MY_SITE_NAME="testapp";
 
 // Determine the time window
 $time_window = 30;
