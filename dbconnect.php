@@ -1,12 +1,12 @@
 <?php
-$con = mysql_connect("localhost", "supagustisql4","'GX:?9pf/&ZKfA!Gl=yR5fOXznumdGI.");
+$con = mysql_connect("localhost", "dbusername","dbpassword");
 
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
- mysql_select_db("supagustisql4") or die ("Die Datenbank existiert nicht.");
+ mysql_select_db("mysqldb") or die ("Die Datenbank existiert nicht.");
         
 
 ?>
