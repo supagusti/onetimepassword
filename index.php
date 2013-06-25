@@ -41,4 +41,4 @@ echo '<img src="tmp/qrcode.png" alt="QR-Code missing :-(">';
 <p>See even more interesting stuff on <a href='http://www.supagusti.tk/'>www.supagusti.tk<a></br>
 Get the source code on <a href='https://github.com/supagusti/onetimepassword/'>Github<a></p></br>            
 
-            <iframe src="http://rcm-de.amazon.de/e/cm?t=supagusti-21&o=3&p=48&l=ur1&category=computer&banner=160GN795Y7B8SC5D9202&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+<iframe src="http://rcm-de.amazon.de/e/cm?t=supagusti-21&o=3&p=48&l=ur1&category=computer&banner=160GN795Y7B8SC5D9202&f=ifr" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
