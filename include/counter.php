@@ -9,7 +9,7 @@ if ($_COOKIE["onetimepassword"] !== "counterSet")
 $counter = $counter + 1;
 // Write the contents back to the file
 file_put_contents($file, $counter);
-// Set Cookie 3600s
+// Set Cookie 3600s for timeout to prevent counter going up on reload
 $value = 'counterSet';
 setcookie("onetimepassword", $value, time()+3600);
 }
