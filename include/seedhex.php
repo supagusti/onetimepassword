@@ -1,3 +1,5 @@
+<?php 
+    
 function seedhex($seed)
 {
     $finalstring="";
@@ -17,3 +19,5 @@ function seedhex($seed)
     // return the string
     return $finalstring;
 }
+
+?>

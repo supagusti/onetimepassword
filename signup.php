@@ -38,7 +38,12 @@
             <td>(the TOTP will be generated out of this, the longer the better!)</td>
         </tr>
         <tr>
-            <td style="color:#777777">period</td>
+            <td>seedhex</td>
+            <td><input type="checkbox" maxlength="40" value="seedhex" name="seedhex" /></td>
+            <td>(tick this, if the seed value is a hex value!)</td>
+        </tr>
+        <tr>
+            <td>period</td>
             <td>
                 <input type="text"  maxlength="4" value="30" name="period" />
                 <!--
@@ -48,7 +53,7 @@
             </td>
         </tr>
         <tr>
-            <td style="color:#777777">digits</td>
+            <td>digits</td>
             <td>
                 <select name="digits"  type="hidden" id="digits" value="6" >
                     <option value="6">6</option>
@@ -58,7 +63,7 @@
             </td>
         </tr>
         <tr>
-            <td style="color:#777777">algorithm</td>
+            <td>algorithm</td>
             <td>
                 <select name="algorithm"  type="hidden" id="algorithm" value="SHA1" >
                     <option value="SHA1">SHA1</option>

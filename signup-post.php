@@ -2,13 +2,26 @@
 
 include 'include/base32.php';
 include 'include/phpqrcode.php';
+include 'include/seedhex.php';
 include("dbconnect.php");
 
 
 $USER =trim(strtolower($_POST['username']));
 $PASS=trim($_POST['password']);
 $PASS2=trim($_POST['retypepassword']);
-$SEED=trim($_POST['seed']);
+
+$SEEDisHEX=trim($_POST['seedhex']);
+if ($SEEDisHEX==="seedhex") 
+    {
+        $SEED=seedhex(trim($_POST['seed']));
+        echo "You've selected that seed is a hex value!";
+    } 
+else 
+    {
+        $SEED=trim($_POST['seed']);
+        echo "You've selected that seed is a char value!";
+    }
+
 $EMAIL=trim($_POST['email']);
 $DOMAIN=trim($_POST['domain']);
 $PERIOD=trim($_POST['period']);
