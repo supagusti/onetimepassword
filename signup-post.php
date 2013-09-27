@@ -25,6 +25,7 @@ else
 $EMAIL=trim($_POST['email']);
 $DOMAIN=trim($_POST['domain']);
 $PERIOD=trim($_POST['period']);
+$TRIM=trim($_POST['trim']);
 $DIGITS=trim($_POST['digits']);
 $ALGORITHM=trim($_POST['algorithm']);
 
@@ -44,9 +45,9 @@ if( isset($USER, $PASS, $SEED, $EMAIL,$DOMAIN) && strcmp($USER,'') != 0 && strcm
 
     mysql_select_db("supagustisql4", $con);
 
-    $sql="INSERT INTO users (user,domain,email,seed,period,digits,algorithm,encodedsecret,password) 
+    $sql="INSERT INTO users (user,domain,email,seed,trim,period,digits,algorithm,encodedsecret,password) 
     VALUES 
-    ('$USER','$DOMAIN','$EMAIL','$SEED','$PERIOD','$DIGITS','$ALGORITHM','$base32SECRET','$PASS') ";
+    ('$USER','$DOMAIN','$EMAIL','$SEED','$TRIM','$PERIOD','$DIGITS','$ALGORITHM','$base32SECRET','$PASS') ";
 
     if (!mysql_query($sql,$con))
         {

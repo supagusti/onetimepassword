@@ -46,11 +46,15 @@
             <td>period</td>
             <td>
                 <input type="text"  maxlength="4" value="30" name="period" />
-                <!--
-                <input type="text"  maxlength="4" value="30" name="period" disabled/>
-                <input type="hidden" name="period" value="30"/>
-                -->
             </td>
+            <td>(in seconds, either 30s or 60s are supported)</td>
+        </tr>
+                <tr>
+            <td>trim</td>
+            <td>
+                <input type="text"  maxlength="4" value="0" name="trim" />
+            </td>
+            <td>(in seconds, to correct problems with your server time.)</td>
         </tr>
         <tr>
             <td>digits</td>
@@ -92,7 +96,9 @@ OPTIONAL: The digits parameter may have the values 6 or 8, and determines how lo
 <h3>Period</h3>
 Defines a period that a TOTP code will be valid for, in seconds. The default value is 30.</BR>
 The period parameter is no longer ignored by the Google Authenticator implementations. </BR>
-
+<h3>Trim</h3>
+This value is for "trimming" the time of the server. It can be positive or negative and is used if you can't change the server's time settings.
+</BR>
 
 </BR>
 <a href="index.php">Return to main screen</a>

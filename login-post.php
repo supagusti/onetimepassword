@@ -18,7 +18,7 @@ $TOTP=trim($_POST['totp']);
 
 	{
         
-            $logon_ergebnis = mysql_query("SELECT lfdnr,user,domain,email,seed,period,digits,algorithm,encodedsecret,password FROM users WHERE user='$USER' AND password='$PASS'") or die( 'Error[SELECT|User]: <br />
+            $logon_ergebnis = mysql_query("SELECT lfdnr,user,domain,email,seed,period,trim,digits,algorithm,encodedsecret,password FROM users WHERE user='$USER' AND password='$PASS'") or die( 'Error[SELECT|User]: <br />
 																	   <pre>' . $sql . '</pre>
 																	   <br />
 																	   MySQL-Error: ' . mysql_error() );     
@@ -53,11 +53,14 @@ $TOTP=trim($_POST['totp']);
                                 // Initial Settings
                                 $MY_SECRET=$userObj->seed;
                                 
+                               // Initial Settings - Trim Time
+                                $trim=$userObj->trim;
+                                
                                 // Determine the time window
                                 $time_window = $period;
 
                                 // Get the exact time from the server
-                                $exact_time = microtime(true);
+                                $exact_time = microtime(true)+$trim;
 
                                 // Round the time down to the time window
                                 $rounded_time = floor($exact_time/$time_window);
