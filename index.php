@@ -2,7 +2,7 @@
 include 'include/phpqrcode.php';
 echo "<h1>DEMO - RFC 6238 for Time-Based One-Time Passwords </h1>";
 $exact_time = microtime(true);
-echo "<p>Current server's time: ".date("D M j G:i:s T Y",$exact_time)."</p>";
+echo '<p>Current server\'s time: '.date("D M j G:i:s T Y",$exact_time).' <a href="check-ntp.php">check time</a></p>';
 QRcode::png("generate a unique QR code with your own TOTP seed!", 'tmp/qrcode.png');
 ?>
 
@@ -35,7 +35,7 @@ echo '<img src="tmp/qrcode.png" alt="QR-Code missing :-(">';
 <a href='https://github.com/NTICompass/PHP-Base32'>BASE32 Implementation in PHP by NTICompass/Eric Siegel aka Rocket Hazmat<a></br>
 <a href='http://phpqrcode.sourceforge.net/'>QR-code generator in PHP by deltalab/Dominik Dzienia<a></br>
 <a href='http://php.net/manual/en/function.hash-hmac.php'>A function implementing the algorithm outlined in RFC 6238 by Pete Walker <a></br>
-
+<a href='http://www.xenocafe.com/tutorials/php/ntp_time_synchronization/index.php'>NTP Time Synchronization Script by Tony Bhimani</a>
 
 <?php include 'include/counter.php'; ?>
 <p>See even more interesting stuff on <a href='http://www.supagusti.tk/'>www.supagusti.tk<a></br>
